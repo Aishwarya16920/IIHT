@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class ="com.spring_core4.ChatApplication" name ="chatapp">
+		<property name = "chatrooms">
+			<map>
+				<entry key = "my_chat_room" value-ref = "cht1"/>
+				<entry key = "fins_chat_room" value-ref = "cht2"/>
+			</map>
+		</property>
+	</bean>
+	
+	<bean class ="com.spring_core4.ChatRoom" name ="cht1">
+		<property name = "users">
+			<list>
+				<value>William</value>
+				<value>Aron</value>
+				<value>Jennifer</value>
+				<value>Calleb</value>
+			</list>
+		</property>
+		<property name = "messages">
+			<set>
+				<value>hey there</value>
+				<value>today is a sunny day</value>
+				<value>let's go fishing next week</value>
+				<value>i bought a new bike</value>
+			</set>
+		</property>
+		<property name = "user_message">
+			<props>
+				<prop key = "William">hey there</prop>
+				<prop key = "Aron">today is a sunny day</prop>
+				<prop key = "Jennifer">let's go fishing next week</prop>
+				<prop key = "Calleb">i bought a new bike</prop>
+			</props>
+		</property>
+	</bean>
+
+	
+	<bean class ="com.spring_core4.ChatRoom" name ="cht2">
+		<property name = "users">
+			<list>
+				<value>Christopher</value>
+				<value>Anthony</value>
+				<value>Brian</value>
+				<value>Andrew</value>
+			</list>
+		</property>
+		<property name = "messages">
+			<set>
+				<value>there is a meeting at local park</value>
+				<value>new games are launching this week</value>
+				<value>concert starts in the evening</value>
+				<value>movie that came out last week is rated low</value>
+			</set>
+		</property>
+		<property name = "user_message">
+			<props>
+				<prop key = "Christopher">there is a meeting at local park</prop>
+				<prop key = "Anthony">new games are launching this week</prop>
+				<prop key = "Brian">concert starts in the evening</prop>
+				<prop key = "Andrew">movie that came out last week is rated low</prop>
+			</props>
+		</property>
+	</bean>
+			
+</beans>

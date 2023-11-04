@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class ="com.spring_core1.Order" name ="order1">
+		<property name="orderId" value= "101" />
+		<property name = "item">
+			<bean id = "item1" class = "com.spring_core1.Item">
+				<property name="itemName" value= "Mango" />
+				<property name="itemPrice" value= "500" />
+			</bean>
+		</property>
+	</bean>
+	<bean class ="com.spring_core1.Order" name ="order2">
+		<property name="orderId" value= "102" />
+		<property name = "item">
+			<bean id = "item2" class = "com.spring_core1.Item">
+				<property name="itemName" value= "Strawberries" />
+				<property name="itemPrice" value= "1000" />
+			</bean>
+		</property>
+	</bean>
+	<bean class ="com.spring_core1.Order" name ="order3">
+		<property name="orderId" value= "103" />
+		<property name = "item">
+			<bean id = "item3" class = "com.spring_core1.Item">
+				<property name="itemName" value= "Watermelon" />
+				<property name="itemPrice" value= "500" />
+			</bean>
+		</property>
+	</bean>
+
+</beans>
